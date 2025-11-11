@@ -106,8 +106,8 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.7)
     .showAtmosphere(true)
-    // ➡️ Cor da Atmosfera ajustada para azul
-    .atmosphereColor("#0055ff")
+    // ➡️ Cor da Atmosfera ajustada para rosa choque
+    .atmosphereColor("#FF1493")
     .atmosphereAltitude(0.25)
     .hexPolygonColor((e) => {
       if (
@@ -156,10 +156,10 @@ function initGlobe() {
   Globe.rotateY(-Math.PI * (5 / 9));
   Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
-  // ➡️ Cor Base do Globo ajustada para azul
-  globeMaterial.color = new Color(0x0055ff);
-  // ➡️ Cor Emissiva do Globo ajustada para azul escuro
-  globeMaterial.emissive = new Color(0x000033);
+  // ➡️ Cor Base do Globo ajustada para rosa choque
+  globeMaterial.color = new Color(0xFF1493);
+  // ➡️ Cor Emissiva do Globo ajustada para rosa choque escuro
+  globeMaterial.emissive = new Color(0x64003C);
   globeMaterial.emissiveIntensity = 0.1;
   globeMaterial.shininess = 0.7;
 
