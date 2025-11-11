@@ -106,7 +106,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.7)
     .showAtmosphere(true)
-    // ➡️ Cor da Atmosfera ajustada para rosa choque
+    // Cor da Atmosfera ajustada para rosa choque
     .atmosphereColor("#FF1493")
     .atmosphereAltitude(0.25)
     .hexPolygonColor((e) => {
@@ -122,8 +122,9 @@ function initGlobe() {
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe.arcsData(travelHistory.flights)
+      // ➡️ Cores dos Arcos ajustadas para verde
       .arcColor((e) => {
-        return e.status ? "#50B6E8" : "#1C4994";
+        return e.status ? "#32CD32" : "#006400"; // Verde Claro : Verde Escuro
       })
       .arcAltitude((e) => {
         return e.arcAlt;
@@ -156,9 +157,9 @@ function initGlobe() {
   Globe.rotateY(-Math.PI * (5 / 9));
   Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
-  // ➡️ Cor Base do Globo ajustada para rosa choque
+  // Cor Base do Globo ajustada para rosa choque
   globeMaterial.color = new Color(0xFF1493);
-  // ➡️ Cor Emissiva do Globo ajustada para rosa choque escuro
+  // Cor Emissiva do Globo ajustada para rosa choque escuro
   globeMaterial.emissive = new Color(0x64003C);
   globeMaterial.emissiveIntensity = 0.1;
   globeMaterial.shininess = 0.7;
