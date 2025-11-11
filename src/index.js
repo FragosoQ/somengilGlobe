@@ -122,7 +122,7 @@ function initGlobe() {
   setTimeout(() => {
     Globe.arcsData(travelHistory.flights)
       .arcColor((e) => {
-        return e.status ? "#9cff00" : "#FF4000";
+        return e.status ? "#50B6E8" : "#1C4994";
       })
       .arcAltitude((e) => {
         return e.arcAlt;
