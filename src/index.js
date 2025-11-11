@@ -41,7 +41,7 @@ function init() {
   // Initialize scene, light
   scene = new Scene();
   scene.add(new AmbientLight(0xbbbbbb, 0.3));
-  scene.background = new Color(0x040d21);
+  scene.background = new Color(0xFF1493);
 
   // Initialize camera, light
   camera = new PerspectiveCamera();
@@ -52,11 +52,11 @@ function init() {
   dLight.position.set(-800, 2000, 400);
   camera.add(dLight);
 
-  var dLight1 = new DirectionalLight(0x7982f6, 1);
+  var dLight1 = new DirectionalLight(0xFF1493, 1);
   dLight1.position.set(-200, 500, 200);
   camera.add(dLight1);
 
-  var dLight2 = new PointLight(0x8566cc, 0.5);
+  var dLight2 = new PointLight(0xFF1493, 0.5);
   dLight2.position.set(-200, 500, 200);
   camera.add(dLight2);
 
@@ -124,7 +124,7 @@ function initGlobe() {
     Globe.arcsData(travelHistory.flights)
       // ➡️ Cores dos Arcos ajustadas para verde
       .arcColor((e) => {
-        return e.status ? "#32CD32" : "#006400"; // Verde Claro : Verde Escuro
+        return e.status ? "#32CD32" : "##2596be"; // Verde Claro : Verde Escuro
       })
       .arcAltitude((e) => {
         return e.arcAlt;
@@ -138,7 +138,7 @@ function initGlobe() {
       .arcsTransitionDuration(1000)
       .arcDashInitialGap((e) => e.order * 1)
       .labelsData(airportHistory.airports)
-      .labelColor(() => "#ffcb21")
+      .labelColor(() => "#32CD32")
       .labelDotOrientation((e) => {
         return e.text === "ALA" ? "top" : "right";
       })
@@ -148,7 +148,7 @@ function initGlobe() {
       .labelResolution(6)
       .labelAltitude(0.01)
       .pointsData(airportHistory.airports)
-      .pointColor(() => "#ffffff")
+      .pointColor(() => "#000000")
       .pointsMerge(true)
       .pointAltitude(0.07)
       .pointRadius(0.05);
